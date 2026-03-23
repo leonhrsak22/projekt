@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <Html>
 <body>
 Otvori moju knjigu 
@@ -8,10 +7,8 @@ Otvori moju knjigu
 
 <html> 
 <head> 
-<title> Moje web sjedište </title>
 </head>
 <body> 
-<h1> Dobrodošli na moju web stranicu </h1>
 <a href="pravila_povezivanje.html">Pravila i povezivanje</a>
 </body>
 </html>
