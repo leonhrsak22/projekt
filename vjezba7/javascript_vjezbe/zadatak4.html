@@ -1,1 +1,29 @@
 
+<html>
+<head>
+<title> Ispis datuma i vremena </title>
+<script language="javascript">
+var danas= new Date();
+var dan=danas.getDate();
+var mjesec=danas.getMonth();
+mjesec=mjesec+1;
+var godina=danas.getFullYear();
+var datum=dan+"/"+mjesec+"/"+godina;
+var h=danas.getHours(); 
+var min=danas.getMinutes();
+var sec=danas.getSeconds();
+var vrijeme=h+":"+min+":"+sec;
+</script>
+</head>
+
+<body>
+Datum:
+<script language="javascript">
+document.write(datum);
+</script><br>
+Vrijeme:
+<script language="javascript">
+document.write("<br><br><br><h2><b><i><center>"+vrijeme+"</i></b></h2>");
+</script>
+</body>
+</html>
