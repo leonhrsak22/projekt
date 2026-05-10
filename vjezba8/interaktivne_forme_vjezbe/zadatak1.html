@@ -1,1 +1,33 @@
+<html>
+<head>
+<title>Citanje Radio buttona</title>
+<script language="javascript">
+function msg()
+{
+if (window.document.forma.radnja[0].checked==true||
+window.document.forma.radnja[4].checked==true)
+{alert("Pa kako si uspio odgovoriti na pitanje.");} 
+if (window.document.forma.radnja[1].checked==true||
+window.document.forma.radnja[2].checked==true||
+window.document.forma.radnja[3].checked==true)
+{alert("Hvala na odgovoru.");}
+}
+</script>
+</head>
 
+<body>
+<form name="forma" onclick="msg()";>
+Što trenutno radite?<br>
+<input type="radio" name="radnja">
+Spavam<br>
+<input type="radio" name="radnja">
+Jedem<br>
+<input type="radio" name="radnja">
+Programiram<br>
+<input type="radio" name="radnja">
+Igram igrice<br>
+<input type="radio" name="radnja">
+Vozim<br>
+</form>
+</body>
+</html>
