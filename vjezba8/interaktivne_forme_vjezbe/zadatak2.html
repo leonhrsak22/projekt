@@ -1,1 +1,38 @@
+<html>
+<head>
+<title>Citanje pull-down menia i scroll liste</title>
+<script language="javascript">
+function opcije()
+{
+var indspol=window.document.forma.spol.selectedIndex;
+var izabspol=window.document.forma.spol.options[indspol].text;
+var indobitelj=window.document.forma.obitelj.selectedIndex;
+var izabobitelj=window.document.forma.obitelj.options[indobitelj].text;
+alert("Vi ste "+izabspol+" koje najviše voli "+izabobitelj+".");
+}
+</script>
+</head>
 
+<body>
+<form name="forma">
+Kojeg ste spola?<br>
+<select name="spol" size="1">
+<option>Musko
+<option>Zensko
+<option>Srednjeg roda
+</select>
+<p>
+Koga u obitelji volite najviše?<br>
+<select name="obitelj" size="3">
+<option>mamu
+<option>tatu
+<option>brata
+<option>sestru
+<option>baku
+<option>djeda
+<option>nekog drugog
+</select><p>
+<input type="button" value="Odgovor" onclick="opcije();">
+</form>
+</body>
+</html>
