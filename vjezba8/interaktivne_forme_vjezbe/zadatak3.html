@@ -1,1 +1,28 @@
+<html>
+<head>
+<title>For petlja, cekiranje svih</title>
+<script language="javascript">
+function cekiranje()
+{
+for (var i=0; i<window.document.forma.elements.length; i++)
+{
+window.document.forma.elements[i].checked=true;
+}
+}
+</script>
+</head>
 
+<body>
+<h2>Što radite u slobodno vrijeme?</h2>
+<form name="forma">
+<input type="checkbox">Spavam<br>
+<input type="checkbox">Učim<br>
+<input type="checkbox">Jedem<br>
+<input type="checkbox">Programiram<br>
+<input type="checkbox">Igram igrice<br>
+<input type="checkbox">Vozim auto<br>
+<br><p>
+<input type="button" value="Cekiraj sve" onclick="cekiranje();">
+</form>
+</body>
+</html>
