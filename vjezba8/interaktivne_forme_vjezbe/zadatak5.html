@@ -1,1 +1,43 @@
+<html>
+<head>
+<title>Petlja u petlji</title>
+<script language="javascript">
+function ispisteksta()
+{
+var redovi=window.document.getElementById("redovi").value;
+var stupci=window.document.getElementById("stupci").value;
+for (var i=0;i<redovi;i++)
+{
+for (var j=0;j<stupci;j++)
+{
+window.document.write("Automobil ");
+}
+window.document.write("<br>");
+}
+}
+</script>
+</head>
 
+<body>
+Odaberi broj redova i stupaca<br>
+Broj redova:
+<select id="redovi" size="1">
+<option>1
+<option>2
+<option>3
+<option>4
+<option>5
+</select><br>
+Broj stupaca:
+<select id="stupci" size="1">
+<option>1
+<option>2
+<option>3
+<option>4
+<option>5
+<option>6
+<option>7
+</select><br><br>
+<input type="button" value="Prikazi" onclick="ispisteksta()">
+</body>
+</html>
