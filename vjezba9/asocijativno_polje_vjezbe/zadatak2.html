@@ -1,0 +1,64 @@
+<html>
+<head>
+<title>Asocijativno polje, Primjer: Telef. imenik</title>
+<script language="javascript">
+var mobime=new Array();
+mobime["Marko"]="091 234 5678";
+mobime["Ana"]="092 345 6789";
+mobime["Ivan"]="095 456 7890";
+mobime["Petra"]="097 567 8901";
+mobime["Luka"]="098 678 9012";
+mobime["Martina"]="099 789 0123";
+mobime["Nikola"]="091 890 1234";
+
+var mobime1=new Array();
+mobime["Marko"]="092 901 2345";
+mobime["Ana"]="095 012 3456";
+mobime["Ivan"]="097 123 4567";
+mobime["Petra"]="098 234 5678";
+mobime["Luka"]="099 345 6789";
+mobime["Martina"]="091 456 7890";
+mobime["Nikola"]="092 567 8901";
+
+var mobime2=new Array();
+mobime["Marko"]="095 678 9012";
+mobime["Ana"]="097 789 0123";
+mobime["Ivan"]="098 890 1234";
+mobime["Petra"]="099 901 2345";
+mobime["Luka"]="091 012 3456";
+mobime["Martina"]="092 123 4567";
+mobime["Nikola"]="095 234 5678";
+
+var mobime3=new Array();
+mobime["Marko"]="097 345 6789";
+mobime["Ana"]="098 456 7890";
+mobime["Ivan"]="099 567 8901";
+mobime["Petra"]="091 678 9012";
+mobime["Luka"]="092 789 0123";
+mobime["Martina"]="095 890 1234";
+mobime["Nikola"]="097 901 2345";
+
+function prikazbroj(mobitelimenik,ulaz)
+{
+var broj=mobitelimenik[ulaz];
+window.document.forma.trazenbroj.value=broj;
+}
+</script>
+</head>
+
+<body>
+<form name="forma">
+Ime:
+<select onchange="prikazbroj(mobime, this.options[this.selectedIndex].value);">
+<option value="Marko">Marko
+<option value="Ana">Ana
+<option value="Ivan">Ivan
+<option value="Petra">Petra
+<option value="Luka">Luka
+<option value="Martina">Martina
+<option value="Nikola">Nikola
+</select><br>
+<input type="text" name="trazenbroj" value="">
+</form>
+</body>
+</html>
