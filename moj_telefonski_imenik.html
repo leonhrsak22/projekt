@@ -1,1 +1,145 @@
+<html>
+<head>
+<title>Moj telefonski imenik</title>
 
+<style>
+body
+{
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+padding: 20px;
+}
+
+h1
+{
+color: darkblue;
+}
+
+form
+{
+width: 400px;
+padding: 20px;
+margin-bottom: 30px;
+background-color: white;
+
+border-radius: 10px;
+-moz-border-radius: 10px;
+-webkit-border-radius: 10px;
+
+box-shadow: 5px 5px 10px #000;
+-moz-box-shadow: 5px 5px 10px #000;
+-webkit-box-shadow: 5px 5px 10px #000;
+}
+
+input, select, textarea
+{
+width: 100%;
+padding: 8px;
+margin-top: 10px;
+}
+
+textarea
+{
+height: 120px;
+}
+</style>
+<script language="JavaScript">
+var imenik = new Array();
+imenik["Marko"]=["091-123-456", "01-234-567"];
+imenik["Ivan"]=["092-222-333", "01-555-666"];
+imenik["Petar"]=["095-777-888", "01-999-000"];
+imenik["Ana"]=["098-444-555", "01-111-222"];
+function ispisiBrojeve() 
+{
+var osoba=document.getElementById("ime").value;
+document.getElementById("mobitel").value=imenik[osoba][0];
+document.getElementById("telefon").value=imenik[osoba][1];
+}
+function promijeniBoju() 
+{
+var osoba=document.getElementById("ime").value;
+if(osoba=="Marko")
+{	
+document.getElementById("forma1").style.backgroundColor="lightblue";
+}
+else if(osoba=="Ivan")
+{
+document.getElementById("forma1").style.backgroundColor="lightgreen";
+}
+else if(osoba=="Petar")
+{
+document.getElementById("forma1").style.backgroundColor="lightyellow";
+}
+else
+{
+document.getElementById("forma1").style.backgroundColor="lightpink";
+}
+}
+function podsjetnik()
+{
+var dan=document.getElementById("dani").value;
+var tekst="";
+if(dan=="Ponedjeljak")
+{
+tekst="Predavanje iz programiranja u 10 sati.";
+}
+else if(dan=="Utorak")
+{
+tekst="Predati vježbu iz Multimedijskih komunikacija.";
+}
+else if(dan=="Srijeda")
+{
+tekst="Učiti JavaScript.";
+}
+else if(dan=="Četvrtak")
+{
+tekst="Napraviti domaću zadaću.";
+}
+else if(dan=="Petak")
+{
+tekst="Provjera svih zadataka.";
+}
+else if(dan=="Subota")
+{
+tekst="Odmor i slobodno vrijeme.";
+}
+else
+{
+tekst="Priprema za novi tjedan.";
+}
+document.getElementById("tekst").value = tekst;
+}
+</script>
+</head>
+
+<body>
+<h1>Moj telefonski imenik</h1>
+<form id="forma1">
+<label>Odaberi osobu:</label>
+<select id="ime" onchange="ispisiBrojeve(); promijeniBoju();">
+<option>Marko</option>
+<option>Ivan</option>
+<option>Petar</option>
+<option>Ana</option>
+</select>
+<label>Mobitel:</label>
+<input type="text" id="mobitel">
+<label>Telefon:</label>
+<input type="text" id="telefon">
+</form>
+<h1>Podsjetnik</h1>
+<form>
+<label>Odaberi dan:</label>
+<select id="dani" onchange="podsjetnik();">
+<option>Ponedjeljak</option>
+<option>Utorak</option>
+<option>Srijeda</option>
+<option>Četvrtak</option>
+<option>Petak</option>
+<option>Subota</option>
+<option>Nedjelja</option>
+</select>
+<textarea id="tekst"></textarea>
+</form>
+</body>
+</html>
