@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Kreiranje i punjenje polja</title>
+</head>
+
+<body>
+<script language="javascript">
+alert ("Molio bi Vas da ispunite zadana polja!");
+var odg=new Array();
+odg[0]=prompt ("Musko ime");
+odg[1]=prompt ("Prdjev muskog roda");
+odg[2]=prompt ("Glagol u proslom vremenu");
+odg[3]=prompt ("Objekt");
+var recenica="";
+recenica=recenica+"Jednom davno živio je gospodin "+odg[0];
+recenica=recenica+" koji je bio "+odg[1]+".";
+recenica=recenica+"On je bio toliko "+odg[1];
+recenica=recenica+" da je "+odg[2]+" glasno hrkati i uplašio "+odg[3];
+window.document.writeln(recenica); 
+</script>
+</body>
+</html>
