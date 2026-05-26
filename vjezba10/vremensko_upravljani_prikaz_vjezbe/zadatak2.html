@@ -3,12 +3,12 @@
 <title>Vremenska petlja</title>
 <script language="javascript">
 var timer;
-function zamjena();
+function zamjena()
 {
 var br=window.document.forma.tekst.value;
 br=parseInt(br)+1;
 window.document.forma.tekst.value=br;
-timer=setTimeout("zamjena();"1000);
+timer=setTimeout("zamjena();",1000);
 }
 </script>  
 </head>
@@ -16,8 +16,8 @@ timer=setTimeout("zamjena();"1000);
 <body>
 <form name="forma">
 <input type="text" name="tekst" value="0"><br>
-<input type="button" name="Pokreni" onClick="promjena();">
-<input type="button" name="Zaustavi" onClick="clearTimeout(timer);">  
+<input type="button" name="Pokreni" value="Pokreni" onClick="zamjena();">
+<input type="button" name="Zaustavi" value="Zaustavi" onClick="clearTimeout(timer);">  
 </form>
 </body>  
 </html>
