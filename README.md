@@ -92,3 +92,25 @@ Moj telefonski imenik</a>
 </h5>
 </body>
 </html>
+
+<html> 
+<head> 
+</head>
+<body> 
+<h5>
+<a href="vjezba10/vremensko_upravljani_prikaz.html">
+Predavanje Vremensko upravljani prikaz</a>
+</h5>
+</body>
+</html>
+
+<html> 
+<head> 
+</head>
+<body> 
+<h5>
+<a href="vjezba_vremensko_upravljani_prikaz.html">
+Vjezba Vremensko upravljani prikaz</a>
+</h5>
+</body>
+</html>
