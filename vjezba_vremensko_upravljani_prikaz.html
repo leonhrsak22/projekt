@@ -1,1 +1,42 @@
+<html>
+<head>
+<title>Slideshow galerija</title>
+<script language="javascript">
+var slike=new Array();
+slike[0]=new Image();
+slike[0].src="slike/1.jpg";
+slike[1]=new Image();
+slike[1].src="slike/2.jpg";
+slike[2]=new Image();
+slike[2].src="slike/3.jpg";
+slike[3]=new Image();
+slike[3].src="slike/4.jpg";
+slike[4]=new Image();
+slike[4].src="slike/5.jpg";
+slike[5]=new Image();
+slike[5].src="slike/6.jpg";
+var vrijeme;
+var indeks=0;
+function promjenaslika()
+{
+document.mojaslika.src=slike[indeks].src;
+indeks++;
+if (indeks>=slike.length)
+{
+indeks=0;
+}
+vrijeme=setTimeout("promjenaslika()",1000);
+}
+</script>
+</head>
 
+<body>
+<h2>Slideshow galerija slika</h2>
+<img name="mojaslika" src="slike/1.jpg" width="500" height="300">
+<br><br>
+<form>
+<input type="button" value="Pokreni slideshow" onclick="clearTimeout(vrijeme); promjenaslika();">
+<input type="button" value="Zaustavi slideshow" onclick="clearTimeout(vrijeme);">
+</form>
+</body>
+</html>
