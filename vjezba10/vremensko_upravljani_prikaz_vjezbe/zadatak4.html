@@ -1,1 +1,51 @@
-
+<html>
+<head>
+<title>Slide Show</title>
+<script language="JavaScript">
+var slika=new Array();
+slika[0]= new Image();
+slika[0].src="prva.jpg";
+slika[1]= new Image();
+slika[1].src="druga.jpg";
+slika[2]= new Image();
+slika[2].src="treca.jpg";
+var timer;
+var timer2;
+var indeks=0;
+var indeks2=0;
+function promjenaslika()
+{
+window.document.slikica.src=slika[indeks].src;	
+indeks++
+if (indeks>=slika.length)
+{
+indeks=0;
+}	
+timer=setTimeout("promjenaslika();",1000);
+}
+function promjenaslika2()
+{
+window.document.slikica2.src=slika[indeks2].src;	
+indeks2++
+if (indeks2>=slika.length)
+{
+indeks2=0;
+}	
+timer2=setTimeout("promjenaslika2();",500);
+}
+</script>
+</head>
+  
+<body>
+<img name="slikica" src="prva.jpg" height="200">
+<form>
+<input type="button" value="Pokreni" onClick="clearTimeout(timer); promjenaslika();">
+<input type="button" value="Zaustavi" onClick="clearTimeout(timer);">
+</form>
+<img name="slikica2" src="prva.jpg" height="200">
+<form>
+<input type="button" value="Pokreni" onClick="clearTimeout(timer2); promjenaslika2();">
+<input type="button" value="Zaustavi" onClick="clearTimeout(timer2);">
+</form>
+</body>
+</html>
