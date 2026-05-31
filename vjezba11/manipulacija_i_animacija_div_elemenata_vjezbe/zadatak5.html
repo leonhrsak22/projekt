@@ -1,0 +1,51 @@
+
+<html>
+<head> 
+<title>Animacija DIV elementa s javascriptom</title>
+<script language="javascript">
+var vrijeme;
+function animacija()
+{
+var jedanDIV=window.document.all.jedan.style;
+var pomak=Math.floor(Math.random()*10);
+if (Math.floor(Math.random()*10)<5)
+{
+jedanDIV.left=parseInt(jedanDIV.left)-pomak;
+jedanDIV.top=parseInt(jedanDIV.top)-pomak;
+}
+else
+{
+jedanDIV.left=parseInt(jedanDIV.left)+pomak;
+jedanDIV.top=parseInt(jedanDIV.top)-pomak;
+}
+
+pomak2=Math.floor(Math.random()*10);
+if (Math.floor(Math.random()*10)<5)
+{
+jedanDIV.left=parseInt(jedanDIV.left)-pomak2;
+jedanDIV.top=parseInt(jedanDIV.top)+pomak2;
+}
+else
+{
+jedanDIV.left=parseInt(jedanDIV.left)+pomak2;
+jedanDIV.top=parseInt(jedanDIV.top)+pomak2;
+}
+
+vrijeme=setTimeout ("animacija();",10);
+}
+</script>
+</head>
+
+<body>
+<div id="jedan" style="position:absolute; top:250; left:350; z-index:3">
+<img src="mis_digitalac.gif">
+</div>
+<div id="mis" style="position:absolute; top:250; left:350; z-index:2">
+<img src="mis.gif" width="256" height="256">
+</div>
+<input type="button" value="Pokreni" 
+onclick="vrijeme=setTimeout('animacija();',500);">
+<input type="button" value="Zaustavi" 
+onclick="clearTimeout(vrijeme);">
+</body>
+</html>
