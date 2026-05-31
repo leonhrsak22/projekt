@@ -1,0 +1,21 @@
+<html>
+<head> 
+<title>Manipulacija DIV elementima s javascriptom</title>
+</head>
+
+<body>
+<div id="slon" style="position:absolute; top:250; left:150; z-index:1">
+<img src="slon.gif">
+</div>
+<div id="jedan" style="position:absolute; top:250; left:120; z-index:2">
+<img src="mis_digitalac.gif">
+</div>
+<div id="mis" style="position:absolute; top:250; left:150; z-index:3">
+<img src="mis.gif"><br>
+</div>
+<input type="button" value="Naprijed slon" 
+onclick="var jedandiv=window.document.all.slon.style;jedandiv.zIndex=10;">
+<input type="button" value="Nazad mis" 
+onclick="var jedandiv=window.document.all.mis.style;jedandiv.zIndex=-1;">
+</body>
+</html>
