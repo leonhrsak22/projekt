@@ -1,7 +1,6 @@
 <html>
 <head>
 <title>Z-index</title>
-
 <style>
 .divslika 
 {
@@ -9,8 +8,17 @@ width: 200px;
 height: 200px;
 position: absolute;
 background-size: cover;
-z-index: 0;
+z-index: 1;
 }
+#div1 
+{ 
+z-index: 5; 
+}
+#div2 
+{ 
+z-index: 1; 
+}
+
 #div3, #div5 
 {
 z-index: 10;
@@ -27,7 +35,7 @@ background-color: gray;
 position: absolute;
 top: 250px;
 left: 0px;
-z-index: 2;
+z-index: 20;
 }
 #sivi:hover 
 {
